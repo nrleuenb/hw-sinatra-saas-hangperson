@@ -28,7 +28,7 @@ class HangpersonGame
     end
 
     def guess(letter)
-        if letter.nil? or letter.empty? or /(\W|\d|_)/.match(letter)
+        if letter.nil? or letter.empty? or not /[A-Za-z]/.match(letter)
             raise ArgumentError
         end
 
